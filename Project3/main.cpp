@@ -6,13 +6,13 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
+	
 	int d, m, y, p, q;
 	char* n = new char[20];
-	cout << "Введите наименование товара: "; cin.getline(n, 20);
-	cout << "Введите дату поступления товара: "; cin >> d >> m >> y;
-	cout << "Введите цену товара: "; cin >> p;
-	cout << "Введите количество товара: "; cin >> q;
+	cout << "Enter product name: "; cin.getline(n, 20);
+	cout << "Enter product price: "; cin >> d >> m >> y;
+	cout << "Enter product quantity: "; cin >> p;
+	cout << "Enter the product markup in %: "; cin >> q;
 
 	Goods obj1(n, d, m, y, p, q);
 	obj1.Print();
@@ -20,7 +20,7 @@ int main()
 	string command;
 	while (command != "Exit")
 	{
-		cout << "Введите команду (Name,Price,Markup,Markdown,Quantity,Print): "; cin >> command;
+		cout << "Enter command (Name,Price,Markup,Markdown,Quantity,Print): "; cin >> command;
 		
 		if (command == "Name")
 		{

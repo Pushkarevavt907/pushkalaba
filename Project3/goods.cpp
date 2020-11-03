@@ -48,42 +48,42 @@ void Goods::Name(char* n)
 {
     cin.ignore();
     n = new char[20];
-    cout << "Введите наименование товара: "; cin.getline(n, 20);
+    cout << "Enter product name : "; cin.getline(n, 20);
     name = _strdup(n);
 }
 
 void Goods::Price(int p)
 {
-    cout << "Введите цену товара: "; cin >> p;
+    cout << "Enter product price: "; cin >> p;
     price = p;
 }
 
 void Goods::Quantity(int q)
 {
-    cout << "Введите количество товара: "; cin >> q;
+    cout << "Enter product quantity : "; cin >> q;
     quantity = q;
 }
 
 void Goods::Markup(int p)
 {
     int mu;
-    cout << "Введите наценку товара в %: "; cin >> mu;
+    cout << "Enter the product markup in % : "; cin >> mu;
     price = p + (p / 100 * mu);
 }
 
 void Goods::Markdown(int p)
 {
     int md;
-    cout << "Введите уценку товара в %: "; cin >> md;
+    cout << "Enter product markdown in % : "; cin >> md;
     price = p - (p / 100 * md);
 }
 
 void Goods::Print()
 {
     cout << "===================================================" << endl;
-    cout << "Наименование: " << name << endl;
-    cout << "Дата поступления: " << setw(2) << setfill('0') << day << "." << setw(2) << setfill('0') << mounth << "." << setw(4) << setfill('0') << year << endl;
-    cout << "Цена: " << price << endl;
-    cout << "Количество: " << quantity << endl;
+    cout << "Name: " << name << endl;
+    cout << "Receipt date: " << setw(2) << setfill('0') << day << "." << setw(2) << setfill('0') << mounth << "." << setw(4) << setfill('0') << year << endl;
+    cout << "Price: " << price << endl;
+    cout << "Quantity: " << quantity << endl;
     cout << "===================================================" << endl;
 }
